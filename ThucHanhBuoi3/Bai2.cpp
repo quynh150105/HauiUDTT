@@ -7,9 +7,13 @@ void merge(vector<float>&a, int l, int m, int r){
 	int i = l, j = m + 1;
 	
 	while(i <= m && j<=r){
-		if(a[i] < a[j]) temp.push_back(a[i++]);
+		if(a[i] < a[j]){
+			 temp.push_back(a[i]);
+			 i++;
+		}
 		else{
-			temp.push_back(a[j++]);
+			temp.push_back(a[j]);
+			j++;
 		}
 	}
 	
